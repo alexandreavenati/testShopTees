@@ -6,8 +6,11 @@
     <h2>Create a command</h2>
     <!-- Création d'un formulaire -->
 
-    <!-- Utilisation de la variable $message du controller de ce fichier -->
-    <h3><?php echo $message ?></h3>
+    <!-- Je vérifie si il y a une clé "order" dans mon espace de stockage de session, 
+     si oui j'affiche le message ci-dessous contenant les informations à l'intérieur  -->
+    <?php if (array_key_exists("order", $_SESSION)) { ?>
+        <h3>Vous avez une commande en attente : <?php echo $_SESSION["order"]["quantity"]; ?> : <?php echo $_SESSION["order"]["product"]; ?></h3>
+    <?php } ?>
 
     <form method="post">
 
@@ -19,7 +22,7 @@
         <!-- Champ de type selection pour sélectionner un produit -->
         <label for="product">
             <select name="product" id="product">
-            <option value="" disabled selected>--Please choose a product--</option>
+                <option value="" disabled selected>--Please choose a product--</option>
                 <option value="tee-shirt_Mario">Tee-shirt Mario</option>
                 <option value="tee-shirt_Wario">Tee-shirt Wario</option>
             </select>
