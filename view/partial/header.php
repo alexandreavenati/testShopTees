@@ -11,6 +11,12 @@
 
 <header>
 
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="create-order-controller.php">Create a command</a></li>
+        </ul>
+    </nav>
 
 </header>
 
