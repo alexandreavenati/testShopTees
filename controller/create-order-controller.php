@@ -16,7 +16,7 @@ if (array_key_exists("quantity", $_POST) &&
         "quantity" => $_POST["quantity"]
     ];
 
-    // J'ajoute dans ma zone de stockage (session serveur) la commande créée
+    // Ajout dans ma zone de stockage (session serveur) la commande créée
     $_SESSION["order"] = $order;
 }
 
