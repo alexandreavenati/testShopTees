@@ -9,7 +9,7 @@
     <!-- Je vérifie si il y a une clé "order" dans mon espace de stockage de session, 
      si oui j'affiche le message ci-dessous contenant les informations à l'intérieur  -->
     <?php if (array_key_exists("order", $_SESSION)) { ?>
-        <h3>Vous avez une commande en attente : <?php echo $_SESSION["order"]["quantity"]; ?> : <?php echo $_SESSION["order"]["product"]; ?></h3>
+        <h3>Pending order : <?php echo $_SESSION["order"]["quantity"]; ?> : <?php echo $_SESSION["order"]["product"]; ?></h3>
     <?php } ?>
 
     <form method="post">
