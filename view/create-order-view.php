@@ -16,9 +16,10 @@
             <input type="number" name="quantity" placeholder="Enter your quantity here..." id="quantity">
         </label>
 
-        <!-- Champ de type selection pour dsélectionner un produit -->
+        <!-- Champ de type selection pour sélectionner un produit -->
         <label for="product">
             <select name="product" id="product">
+            <option value="" disabled selected>--Please choose a product--</option>
                 <option value="tee-shirt_Mario">Tee-shirt Mario</option>
                 <option value="tee-shirt_Wario">Tee-shirt Wario</option>
             </select>
