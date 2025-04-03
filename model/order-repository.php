@@ -14,8 +14,10 @@ function createOrder($product, $quantity)
 {
     // règle de commande
     if ($quantity <= 0) {
+        // création d'une exception si la quantité est <= à 0
         throw new Exception("Quantity is lesser than or equal to 0");
     } else if ($quantity > 3) {
+        // création d'une exception si la quantité est > à 3
         throw new Exception("Quantity is greater than 3");
     } else {
 
