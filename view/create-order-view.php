@@ -9,11 +9,10 @@
     <!-- Message d'erreur -->
     <h3><?php echo $message; ?></h3>
    
-
     <!-- Récupère la commande de l'utilisateur -->
     <?php if (findOrderByUser()) { ?>
         <!-- Je récupère la commande -->
-        <h3>Pending order : <?php echo $OrderByUser["quantity"]; ?> : <?php echo $OrderByUser["product"]; ?></h3>
+        <h3>Pending order : <?php echo $orderByUser["quantity"]; ?> : <?php echo $orderByUser["product"]; ?></h3>
     <?php } ?>
 
     <form method="post">
