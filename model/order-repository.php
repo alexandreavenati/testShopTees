@@ -16,8 +16,7 @@ function createOrder($product, $quantity) {
         "product" => $product,
         "quantity" => $quantity
     ];
-
-    // Ajout dans ma zone de stockage (session serveur) la commande créée
+    
     return $order;
 }
 
