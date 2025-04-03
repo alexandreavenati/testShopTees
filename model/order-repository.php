@@ -12,10 +12,12 @@ function findOrderByUser()
 
 function createOrder($product, $quantity)
 {
-    // stockage de la commande
+    // règle de commande
     if ($quantity < 0 || $quantity > 3) {
         return false;
     } else {
+
+        // stockage de la commande
         $order = [
             "product" => $product,
             "quantity" => $quantity

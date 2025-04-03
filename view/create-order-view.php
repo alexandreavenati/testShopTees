@@ -6,6 +6,7 @@
     <h2>Create a command</h2>
     <!-- Création d'un formulaire -->
 
+    <!-- Message d'erreur -->
     <h3><?php echo $message; ?></h3>
    
 
