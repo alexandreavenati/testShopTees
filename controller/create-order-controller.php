@@ -24,10 +24,10 @@ if (
     $order = createOrder($_POST['product'], $_POST['quantity']);
 
     //Si il y a une commande on la garde, sinon on envoie un msg d'erreur
-    if ($order) {
+    try {
         saveOrder($order);
-    } else {
-        $message = "Order cannot be processed";
+    } catch(Exception $e) {
+        $message = $e->getMessage();
     }
 }
 
