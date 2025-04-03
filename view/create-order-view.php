@@ -6,10 +6,10 @@
     <h2>Create a command</h2>
     <!-- Création d'un formulaire -->
 
-    <!-- Vérification de la présence d'une clé (order) dans mon espace de stockage de session, 
-     si oui j'affiche le message ci-dessous contenant les informations à l'intérieur  -->
-    <?php if (array_key_exists("order", $_SESSION)) { ?>
-        <h3>Pending order : <?php echo $_SESSION["order"]["quantity"]; ?> : <?php echo $_SESSION["order"]["product"]; ?></h3>
+    <!-- Récupère la commande de l'utilisateur -->
+    <?php if (findOrderByUser()) { ?>
+        <!-- Je récupère la commande -->
+        <h3>Pending order : <?php echo $OrderByUser["quantity"]; ?> : <?php echo $OrderByUser["product"]; ?></h3>
     <?php } ?>
 
     <form method="post">
