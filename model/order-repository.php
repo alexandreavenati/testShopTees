@@ -17,10 +17,11 @@ function createOrder($product, $quantity)
         return false;
     } else {
 
-        // stockage de la commande
+        // stockage de la commande avec la date au moment de la création de la commande
         $order = [
             "product" => $product,
-            "quantity" => $quantity
+            "quantity" => $quantity,
+            "createdAt" => new DateTime()
         ];
 
         return $order;

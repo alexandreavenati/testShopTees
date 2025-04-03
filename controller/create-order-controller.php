@@ -27,7 +27,7 @@ if (
     if ($order) {
         saveOrder($order);
     } else {
-        $message = "Impossible de créer la commande";
+        $message = "Order cannot be processed";
     }
 }
 

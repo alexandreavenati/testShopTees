@@ -13,6 +13,8 @@
     <?php if (findOrderByUser()) { ?>
         <!-- Je récupère la commande -->
         <h3>Pending order : <?php echo $orderByUser["quantity"]; ?> : <?php echo $orderByUser["product"]; ?></h3>
+        <!-- Date au format Année, mois, jour -->
+        <p>Created on <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
     <?php } ?>
 
     <form method="post">
