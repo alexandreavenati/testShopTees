@@ -1,6 +1,8 @@
 <?php
 
 require_once('../config.php');
+// Appel du repository pour afficher les choix de produits dans la view
+require_once('../model/product-repository.php');
 
 //Je démarre la session : création d'un identifiant unique et l'associe à une zone de stockage sur le serveur,
 // qui l'envoie au navigateur (cookie)

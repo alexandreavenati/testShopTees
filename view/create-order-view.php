@@ -23,8 +23,11 @@
         <label for="product">
             <select name="product" id="product">
                 <option value="" disabled selected>--Please choose a product--</option>
-                <option value="tee-shirt_Mario">Tee-shirt Mario</option>
-                <option value="tee-shirt_Wario">Tee-shirt Wario</option>
+                <!-- Création d'une boucle pour avoir les produits sélectionnables dans le select à partir du tableau products
+                 du repository -->
+                <?php foreach ($products as $product) { ?>
+                    <option value="<?php echo $product ?>"><?php echo $product ?></option>
+                <?php } ?>
             </select>
         </label>
 
