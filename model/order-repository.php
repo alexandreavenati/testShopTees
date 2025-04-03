@@ -13,7 +13,7 @@ function findOrderByUser()
 function createOrder($product, $quantity)
 {
     // règle de commande
-    if ($quantity < 0 || $quantity > 3) {
+    if ($quantity <= 0 || $quantity > 3) {
         return false;
     } else {
 
