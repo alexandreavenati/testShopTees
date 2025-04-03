@@ -5,17 +5,23 @@ require_once('../config.php');
 require_once('../model/product-repository.php');
 require_once('../model/order-repository.php');
 
-
+$message = "";
 //Je démarre la session : création d'un identifiant unique et l'associe à une zone de stockage sur le serveur,
 // qui l'envoie au navigateur (cookie)
 session_start();
 
 // condition qui vérifie l'envoi des valeurs dans le formulaire
-if (array_key_exists("quantity", $_POST) && 
-	array_key_exists("product", $_POST))
-{
+if (
+    array_key_exists("quantity", $_POST) &&
+    array_key_exists("product", $_POST)
+) {
     $order = createOrder($_POST['product'], $_POST['quantity']);
-    saveOrder($order);
+
+    if ($order) {
+        saveOrder($order);
+    } else {
+        $message = "Impossible de créer la commande";
+    }
 }
 
 $OrderByUser = findOrderByUser();

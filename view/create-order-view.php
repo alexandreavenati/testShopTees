@@ -6,6 +6,9 @@
     <h2>Create a command</h2>
     <!-- Création d'un formulaire -->
 
+    <h3><?php echo $message; ?></h3>
+   
+
     <!-- Récupère la commande de l'utilisateur -->
     <?php if (findOrderByUser()) { ?>
         <!-- Je récupère la commande -->
