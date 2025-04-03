@@ -26,7 +26,7 @@
                 <!-- Création d'une boucle pour avoir les produits sélectionnables dans le select à partir du tableau products
                  du repository -->
                 <?php foreach ($products as $product) { ?>
-                    <option value="<?php echo $product ?>"><?php echo $product ?></option>
+                    <option value="<?php echo $product; ?>"><?php echo $product; ?></option>
                 <?php } ?>
             </select>
         </label>
