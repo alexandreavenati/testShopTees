@@ -17,6 +17,7 @@ if (
 ) {
     $order = createOrder($_POST['product'], $_POST['quantity']);
 
+    //Si il y a une commande on la garde, sinon on envoie un msg d'erreur
     if ($order) {
         saveOrder($order);
     } else {
