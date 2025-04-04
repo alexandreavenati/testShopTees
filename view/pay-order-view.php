@@ -21,7 +21,7 @@
 
             <a href="cancel-order-controller.php">Cancel the order</a>
 
-            <!-- Permet d'aller sur la page pour annuler le paiement en cas d'erreur -->
+            <!-- Permet d'aller sur la page pour annuler la commande en cas d'erreur -->
         <?php } elseif ($orderByUser['status'] === "CANCELLED") { ?>
             <h3>Order was cancelled</h3>
         <?php } ?>

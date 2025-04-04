@@ -13,7 +13,7 @@
         <!-- Statut de la commande -->
         <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
 
-        <!-- Formulaire pour annuler la commande si elle est au statut "PAID" -->
+        <!-- Formulaire pour annuler la commande si elle est au statut "CART" -->
         <?php if ($orderByUser['status'] === "CART") { ?>
             <form method="POST">
                 <div><button type="submit">Cancel Order</button></div>
