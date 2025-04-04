@@ -13,8 +13,10 @@
         <!-- Statut de la commande -->
         <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
 
-        <div><button>Pay Order</button></div>
-        
+        <form method="POST">
+            <div><button type="submit">Pay Order</button></div>
+        </form>
+
     <?php } else { ?>
         <h3>No order in progress...</h3>
     <?php } ?>
