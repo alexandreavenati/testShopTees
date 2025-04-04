@@ -13,10 +13,18 @@
         <!-- Statut de la commande -->
         <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
 
-        <form method="POST">
-            <div><button type="submit">Pay Order</button></div>
-        </form>
+        <!-- Formulaire pour payer la commande -->
+        <?php if ($orderByUser['status'] === "CART") { ?>
+            <form method="POST">
+                <div><button type="submit">Pay Order</button></div>
+            </form>
 
+            <!-- Permet d'aller sur la page pour annuler le paiement en cas d'erreur -->
+        <?php } elseif ($orderByUser['status'] === "PAID") { ?>
+            <a href="../controller/cancel-order-controller.php">Go to cancel payment</a>
+        <?php } ?>
+
+        <!-- Vérifie si il y a une commande -->
     <?php } else { ?>
         <h3>No order in progress...</h3>
     <?php } ?>
