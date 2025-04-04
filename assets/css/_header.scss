@@ -1,5 +1,5 @@
 header {
-    margin: 1% 0 1% 0;
+    margin: 2% 0 2% 0;
 
     nav {
         width: 80%;
@@ -7,6 +7,8 @@ header {
 
         ul {
             list-style: none;
+            display: flex;
+            justify-content: space-around;
 
             li {
                 a {

@@ -22,6 +22,8 @@
             <!-- Permet d'aller sur la page pour annuler le paiement en cas d'erreur -->
         <?php } elseif ($orderByUser['status'] === "PAID") { ?>
             <a href="../controller/cancel-order-controller.php">Go to cancel payment</a>
+        <?php } else { ?>
+            <h3>Order was cancelled</h3>
         <?php } ?>
 
         <!-- Vérifie si il y a une commande -->
