@@ -7,7 +7,7 @@ session_start();
 $orderByUser = findOrderByUser();
 
 // Vérifie si l'utilisateur a appuyé sur le bouton annuler du form (method='post') et si la commande est au statut "PAID"
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $orderByUser['status'] === "PAID") {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $orderByUser['status'] === "CART") {
     // Changement du statut de la commande
     $orderByUser['status'] = "CANCELLED";
     // Re-sauvegarde la commande avec le statut changé

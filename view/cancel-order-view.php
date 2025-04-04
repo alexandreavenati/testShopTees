@@ -14,7 +14,7 @@
         <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
 
         <!-- Formulaire pour annuler la commande si elle est au statut "PAID" -->
-        <?php if ($orderByUser['status'] === "PAID") { ?>
+        <?php if ($orderByUser['status'] === "CART") { ?>
             <form method="POST">
                 <div><button type="submit">Cancel Order</button></div>
             </form>
@@ -25,7 +25,7 @@
 
             <!-- Vérifie si il n'a pas le statut "PAID" -->
         <?php } else { ?>
-            <h3>Order cannot be cancelled unless it is paid.</h3>
+            <h3>Order cannot be cancelled unless it is in cart.</h3>
         <?php } ?>
 
         <!-- Vérifie si il y a une commande -->

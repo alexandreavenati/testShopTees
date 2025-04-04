@@ -19,10 +19,10 @@
                 <div><button type="submit">Pay Order</button></div>
             </form>
 
+            <a href="cancel-order-controller.php">Cancel the order</a>
+
             <!-- Permet d'aller sur la page pour annuler le paiement en cas d'erreur -->
-        <?php } elseif ($orderByUser['status'] === "PAID") { ?>
-            <a href="../controller/cancel-order-controller.php">Go to cancel payment</a>
-        <?php } else { ?>
+        <?php } elseif ($orderByUser['status'] === "CANCELLED") { ?>
             <h3>Order was cancelled</h3>
         <?php } ?>
 
