@@ -1,4 +1,5 @@
 <?php 
+require_once('../config.php');
 require_once('../model/order-repository.php');
 
 session_start();

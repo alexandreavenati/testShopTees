@@ -14,7 +14,7 @@
         <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
 
         <div><button>Pay Order</button></div>
-
+        
     <?php } else { ?>
         <h3>No order in progress...</h3>
     <?php } ?>

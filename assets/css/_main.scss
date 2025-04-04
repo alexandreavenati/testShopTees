@@ -13,11 +13,18 @@ main {
             margin-bottom: 2%;
         }
 
+        h3 {
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
         div {
             width: 20%;
+            margin-top: 2%;
 
             button {
                 border-radius: 15px;
+                padding: 5px;
             }
         }
     }
