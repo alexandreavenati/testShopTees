@@ -25,7 +25,8 @@ function createOrder($product, $quantity)
         $order = [
             "product" => $product,
             "quantity" => $quantity,
-            "createdAt" => new DateTime()
+            "createdAt" => new DateTime(),
+            "status" => "CART"
         ];
 
         return $order;
