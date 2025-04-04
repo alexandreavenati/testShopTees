@@ -15,6 +15,7 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="create-order-controller.php">Create a command</a></li>
+            <li><a href="pay-order-controller.php">Cart</a></li>
         </ul>
     </nav>
 
