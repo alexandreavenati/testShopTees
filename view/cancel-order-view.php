@@ -4,34 +4,21 @@
 
     <h2>Cancel order payment</h2>
 
-    <!-- Récupère la commande de l'utilisateur -->
-    <?php if (findOrderByUser()) { ?>
-        <!-- Je récupère la commande -->
-        <h3><?php echo $orderByUser["quantity"]; ?> : <?php echo $orderByUser["product"]; ?></h3>
-        <!-- Date au format Année, mois, jour -->
-        <p>Created on <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
-        <!-- Statut de la commande -->
-        <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
+    <h3><?php echo $message; ?></h3>
 
-        <!-- Formulaire pour annuler la commande si elle est au statut "CART" -->
-        <?php if ($orderByUser['status'] === "CART") { ?>
-            <form method="POST">
-                <div><button type="submit">Cancel Order</button></div>
-            </form>
-        
-            <!-- Vérifie si le statut est déjà "CANCELLED" -->
-        <?php } elseif ($orderByUser['status'] === "CANCELLED") { ?>
-            <p>Your order has already been cancelled.</p>
+	<?php if ($orderByUser) {?>
+		<h3> <?php echo $orderByUser['product']; ?> :  <?php echo $orderByUser['quantity']; ?></h3>
+		<p>Créée le <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
+		<h3>Votre commande est en statut : "<?php echo $orderByUser['status']; ?>"</h3>
 
-            <!-- Vérifie si il n'a pas le statut "PAID" -->
-        <?php } else { ?>
-            <h3>Order cannot be cancelled unless it is in cart.</h3>
-        <?php } ?>
 
-        <!-- Vérifie si il y a une commande -->
-    <?php } else { ?>
-        <h3>No order to cancel...</h3>
-    <?php } ?>
+		<form method="post">
+			<button type="submit">Cancel Order</button>
+		</form>
+
+	<?php } else { ?>
+		<h3>No order to cancel...</h3>
+	<?php } ?>
 
 </section>
 

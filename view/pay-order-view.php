@@ -4,32 +4,22 @@
 
     <h2>Proceed to payment</h2>
 
-    <!-- Récupère la commande de l'utilisateur -->
-    <?php if (findOrderByUser()) { ?>
-        <!-- Je récupère la commande -->
-        <h3><?php echo $orderByUser["quantity"]; ?> : <?php echo $orderByUser["product"]; ?></h3>
-        <!-- Date au format Année, mois, jour -->
-        <p>Created on <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
-        <!-- Statut de la commande -->
-        <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
+    <h3><?php echo $message; ?></h3>
 
-        <!-- Formulaire pour payer la commande -->
-        <?php if ($orderByUser['status'] === "CART") { ?>
-            <form method="POST">
-                <div><button type="submit">Pay Order</button></div>
-            </form>
+    <?php if ($orderByUser) { ?>
+        <h3> <?php echo $orderByUser['product']; ?> : <?php echo $orderByUser['quantity']; ?></h3>
+        <p>Créée le <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
+        <h3>Votre commande est en statut : "<?php echo $orderByUser['status']; ?>" </h3>
 
-            <a href="cancel-order-controller.php">Cancel the order</a>
 
-            <!-- Permet d'aller sur la page pour annuler la commande en cas d'erreur -->
-        <?php } elseif ($orderByUser['status'] === "CANCELLED") { ?>
-            <h3>Order was cancelled</h3>
-        <?php } ?>
+        <form method="post">
+            <button type="submit">Pay Order</button>
+        </form>
 
-        <!-- Vérifie si il y a une commande -->
     <?php } else { ?>
-        <h3>No order in progress...</h3>
+        <h3>No order to pay...</ph3>
     <?php } ?>
+
 
 </section>
 
