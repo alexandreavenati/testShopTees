@@ -13,7 +13,6 @@ $orderByUser = findOrderByUser();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($orderByUser['status'] === 'PAID') {
         $orderByUser['status'] = 'SHIPPED';
-        saveOrder($orderByUser);
 
         $message = "Your order is being shipped.";
     } else if ($orderByUser['status'] === 'SHIPPED') {

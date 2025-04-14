@@ -38,7 +38,7 @@
             </select>
         </label>
 
-        <button type="submit">Send Order</button>
+        <div><button type="submit">Send Order</button></div>
     </form>
 
 </section>

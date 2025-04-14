@@ -13,7 +13,7 @@
 
 
 		<form method="post">
-			<button type="submit">Cancel Order</button>
+			<div><button type="submit">Cancel Order</button></div>
 		</form>
 
 	<?php } else { ?>

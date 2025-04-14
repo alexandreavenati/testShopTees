@@ -25,6 +25,13 @@ main {
             button {
                 border-radius: 15px;
                 padding: 5px;
+                transition: all .5s;
+
+                &:hover {
+                    background-color: black;
+                    color: rgb(255, 255, 255);
+                    border: solid 1px white;
+                }
             }
         }
     }

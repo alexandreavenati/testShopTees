@@ -15,7 +15,7 @@ require_once('partial/header.php');
 
     <form method="POST">
 
-        <button type="submit">Ship Order</button>
+        <div><button type="submit">Ship Order</button></div>
 
     </form>
 

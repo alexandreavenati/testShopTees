@@ -13,7 +13,7 @@
 
 
         <form method="post">
-            <button type="submit">Pay Order</button>
+            <div><button type="submit">Pay Order</button></div>
         </form>
 
     <?php } else { ?>
