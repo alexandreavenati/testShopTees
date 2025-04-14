@@ -15,7 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $orderByUser['status'] = 'SHIPPED';
         saveOrder($orderByUser);
 
-        $message = "Your  order has been shipped";
+        $message = "Your  order has been shipped.";
+    } else if ($orderByUser['status'] === 'SHIPPED') {
+        $message = "Your order has already been shipped.";
     } else {
         $message = "Order can only be shipped after being paid.";
     }
