@@ -15,7 +15,7 @@ class Order {
     public $status;
 }
 
-// je crée une commande
+// je crée un objet qui aura toutes les propriétées définies de la classe
 $order = new Order();
 // je définis le produit de la commande
 $order->product = "Tee-shirt Mario";
