@@ -5,7 +5,7 @@ class Order {
     // je lui donne une variable "product" qui représentera le produit de la commande
     public $product;
 
-    // je lui donne une variable "quantity" qui représentera la quantité de la commande
+    // je lui donne une variable "quantity" qui représentera la quantité du produit de la commande
     public $quantity;
 
     // je lui donne une variable "createdAt" qui représentera la date de création de la commande
