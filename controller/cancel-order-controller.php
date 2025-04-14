@@ -9,6 +9,8 @@ $orderByUser = findOrderByUser();
 
 $message = "";
 
+// je regarde si c'est une méthode post (si oui ça veut dire que l'utilisateur
+// a cliqué sur "cancel" dans le form)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	if ($orderByUser['status'] === 'CART') {
