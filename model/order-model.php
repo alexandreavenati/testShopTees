@@ -14,3 +14,14 @@ class Order {
     // je lui donne une variable "status" qui représentera le statut de la commande
     public $status;
 }
+
+// je crée une commande
+$order = new Order();
+// je définis le produit de la commande
+$order->product = "Tee-shirt Mario";
+// je définis la quantité de produit
+$order->quantity = "2";
+// je définis la date de création de la commande
+$order->createdAt = new DateTime();
+// je définis le statut de la commande
+$order->status = "CART";
