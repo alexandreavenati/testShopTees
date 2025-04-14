@@ -14,7 +14,7 @@
         <!-- Je récupère la commande -->
         <h3>Pending order : <?php echo $orderByUser["quantity"]; ?> : <?php echo $orderByUser["product"]; ?></h3>
         <!-- Date au format Année, mois, jour -->
-        <p>Created on <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
+        <p>Created on <?php echo $orderByUser['createdAt']->format('d-m-y'); ?></p>
         <!-- Statut de la commande -->
         <h3>Your order status is : "<?php echo $orderByUser['status'] ?>"</h3>
     <?php } ?>

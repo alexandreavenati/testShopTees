@@ -8,7 +8,7 @@
 
 	<?php if ($orderByUser) {?>
 		<h3> <?php echo $orderByUser['product']; ?> :  <?php echo $orderByUser['quantity']; ?></h3>
-		<p>Créée le <?php echo $orderByUser['createdAt']->format('y-m-d'); ?></p>
+		<p>Créée le <?php echo $orderByUser['createdAt']->format('d-m-y'); ?></p>
 		<h3>Votre commande est en statut : "<?php echo $orderByUser['status']; ?>"</h3>
 
 
